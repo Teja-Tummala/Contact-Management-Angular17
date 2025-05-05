@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row justify-content-center mb-4">
+    <div class="col-12 text-center">
+      <h3>Add New Contact</h3>
+    </div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card shadow-lg border-0 rounded-3 p-4">
+        <form (ngSubmit)="addContact()">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" [(ngModel)]="contact.name" name="name" required />
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="contact.email" name="email" required />
+          </div>
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="text" class="form-control" id="phone" [(ngModel)]="contact.phone" name="phone" required />
+          </div>
+          <button type="submit" class="btn btn-success w-100">Add Contact</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
